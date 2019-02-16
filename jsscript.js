@@ -1,8 +1,13 @@
-var  a = 10;
-if (a > 9){
-    console.log("Hallo a is groter dan 9 hoor");
-}
+var mijnauto = {
+    merk: "Ford",
+    type: "Mondeo",
+    aantalWielen: 4,
+    kleur: "blauw"
+};
 
-for (let i = 0; i < 10; i++) {
-    console.log("i heeft nu de waarde " + i);
-}
+console.log(mijnauto.kleur);
+
+document.getElementById("paginatitel").innerHTML = "Mijn Geweldige Pagina";
+document.getElementById("subkop").innerHTML = "Mijn Geweldige subkop";
+document.getElementById("aap1").src = "img/aap1.jpg";
+document.getElementById("aap2").src = "img/aap2.jpg";
