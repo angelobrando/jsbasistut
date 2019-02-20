@@ -1,22 +1,20 @@
-var mijnAuto = {
-    kleur : "blauw",
-    merk : "Ford",
-    snelheid: 0,
+var plaatjes = [1,2,3,4,5,6,7,8,9];
+var teller = 0;
 
-    gasgeven: function(){
-        this.snelheid += 5;
-        console.log(this.snelheid)
-    },
-    toeteren: function () {
-        console.log("toet!")
+var slideholder = document.getElementById("picdiv");
+slideholder.style.backgroundImage = "url('img/aap1.jpg')";
+
+slideholder.addEventListener("click", function () {
+    slideholder.style.backgroundImage = "url('img/aap"+ getAap() +".jpg')";
+
+});
+
+function getAap(){
+    if (teller >= plaatjes.length){
+        teller = 1;
+    } else {
+        teller++;
     }
+    console.log(teller);
+    return teller;
 }
-
-console.log(mijnAuto.kleur);
-mijnAuto.gasgeven();
-mijnAuto.gasgeven();
-mijnAuto.gasgeven();
-mijnAuto.gasgeven();
-mijnAuto.gasgeven();
-mijnAuto.toeteren();
-
