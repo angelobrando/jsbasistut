@@ -1,14 +1,22 @@
-var images = document.getElementsByTagName("img");
-var pandomRumbers = [];
+var mijnAuto = {
+    kleur : "blauw",
+    merk : "Ford",
+    snelheid: 0,
 
-while (pandomRumbers.length < 9){
-    var randomnumber = Math.floor(Math.random()*9 +1);
-    if (pandomRumbers.lastIndexOf(randomnumber) == -1 ) {
-        pandomRumbers.push(randomnumber)
+    gasgeven: function(){
+        this.snelheid += 5;
+        console.log(this.snelheid)
+    },
+    toeteren: function () {
+        console.log("toet!")
     }
 }
-console.log(pandomRumbers)
-for (let i = 0; i < images.length; i++) {
-    console.log(pandomRumbers[i]);
-    images[i].src = "img/aap" + pandomRumbers[i] + ".jpg"
-}
+
+console.log(mijnAuto.kleur);
+mijnAuto.gasgeven();
+mijnAuto.gasgeven();
+mijnAuto.gasgeven();
+mijnAuto.gasgeven();
+mijnAuto.gasgeven();
+mijnAuto.toeteren();
+
